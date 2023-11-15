@@ -9,12 +9,13 @@ void exe_press(char *press, char **cmd)
 {
 	char **cm = environ;
 	pid_t my_pid;
+	int s;
 
 	my_pid = fork();
 
-	if (my_pid == -1)
+	if (my_pid < 0)
 	{
-		perror("unsuccessful\n");
+		perror("press");
 	}
 	if (my_pid == 0)
 	{
@@ -26,6 +27,6 @@ void exe_press(char *press, char **cmd)
 	}
 	else
 	{
-		wait(NULL);
+		wait(&s);
 	}
 }
