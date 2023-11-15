@@ -8,7 +8,7 @@
  */
 int main(int ac, char **av, char *envp[])
 {
-	size_t buf = 0;
+	size_t buff = 0;
 	ssize_t size_line = 0;
 	char *l = NULL, *pcommand = NULL, *p = NULL;
 	char **comm = NULL, **ps = NULL;
@@ -23,7 +23,7 @@ int main(int ac, char **av, char *envp[])
 		f_buff(ps);
 		free(pcommand);
 		show_prompt();
-		size_line = getline(&l, &buf, stdin);
+		size_line = getline(&l, &buff, stdin);
 		if (size_line < 0)
 			break;
 		form.count++;
