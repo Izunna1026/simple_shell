@@ -13,7 +13,7 @@ char *finding_path(void)
 		if (_strncmp(*cm, "PATH=", 5) == 0)
 		{
 			p = *cm;
-			while (*cm && i < 5)
+			while (*p && i < 5)
 			{
 				p++;
 				i++;
