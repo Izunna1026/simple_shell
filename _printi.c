@@ -4,7 +4,7 @@
  * @word: word to print
  * Return: nothing
  */
-void _printi(const char *word)
+void _printi(char *word)
 {
-	write(STDOUT_FILENO, word, strlen(word));
+	write(STDOUT_FILENO, word, _strlen(word));
 }
