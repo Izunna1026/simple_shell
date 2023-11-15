@@ -1,10 +1,26 @@
 #include "simpleshell.h"
 /**
- * _printi - to print function
- * @word: word to print
- * Return: nothing
+ * _putchar - to act as putchar
+ * @c: to printer the character
+ * Return: 1
  */
-void _printi(char *word)
+int _putchar(char c)
 {
-	write(STDOUT_FILENO, word, _strlen(word));
+	return (write(1, &c, 1));
+}
+/**
+ * _printi - to print string
+ * @k: the string to print
+ * Return: to print the whole string
+ */
+int _printi(char *k)
+{
+	int v = 0;
+
+	while (k[v] != '\0')
+	{
+		_putchar(k[v]);
+		v++;
+	}
+	return (v);
 }

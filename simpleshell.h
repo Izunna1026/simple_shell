@@ -18,7 +18,8 @@ extern __sighandler_t signal(int __sig, __sighandler_t __handler);
 
 /* prototypes used */
 void show_prompt(void);
-void _printi(char *word);
+int _putchar(char c);
+int _printi(char *k);
 void f_buff(char **buff);
 void exe_press(char *press, char **cmd);
 char **token_break(char *l);
